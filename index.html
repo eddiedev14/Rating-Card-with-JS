@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <main class="container">
+      <!-- Rating state start -->
+
+      <div class="card card__rating">
+        <div class="card__rating-header">
+          <figure class="card__rating-header__container">
+            <img src="images/icon-star.svg" alt="Star" class="card__rating-header__container__img">
+          </figure>
+        </div>
+
+        <div class="card__rating-main">
+          <h2 class="card__rating-main__title">How did we do?</h2>
+          <p class="card__rating-main__paragraph">Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!</p>
+        </div>
+
+        <div class="card__rating-rate">
+          <div class="card__rating-rate__score__container">
+            <button class="card__rating-rate__score__container-rate__btn">1</button>
+            <button class="card__rating-rate__score__container-rate__btn">2</button>
+            <button class="card__rating-rate__score__container-rate__btn">3</button>
+            <button class="card__rating-rate__score__container-rate__btn">4</button>
+            <button class="card__rating-rate__score__container-rate__btn">5</button>
+          </div>
+
+          <a href="#" class="card__rating-rate__submit">Submit</a>
+        </div>
+      </div>
+
+      <!-- Rating state end -->
+
+      <div class="card card__thankyou">
+        <div class="card__thankyou-header">
+          <figure class="card__thankyou-header__container">
+            <img src="images/illustration-thank-you.svg" alt="Thank You" class="card__thankyou-header__container__img">
+          </figure>
+        </div>
+
+        <div class="card__thankyou-score">
+          <p class="card__thankyou-score__paragraph">You selected <span class="card__thankyou-score__span">4</span> out of 5</p>
+        </div>
+
+        <div class="card__thankyou-texts">
+          <h2 class="card__thankyou-texts__title">Thank you!</h2>
+          <p class="card__thankyou-texts__paragraph">We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!</p>
+        </div>
+      </div>
+
+  </main>
+  
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

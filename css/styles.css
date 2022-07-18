@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: rgb(37, 45, 55);
+    --very-dark-blue: rgb(18, 20, 23);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--very-dark-blue);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* ------------- Card Rate ------------- */
+
+.card{
+    width: 325px;
+    height: 360px;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.card__rating-header__container__img, .card__rating-rate__score__container-rate__btn{
+    padding: 10px;
+    background-color: #343e47;
+    border-radius: 50%;
+}
+
+.card__rating-header__container__img{
+    margin-bottom: 10px;
+}
+
+.card__rating-main__title, .card__thankyou-texts__title{
+    font-size: 1.65em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card__rating-main__paragraph, .card__thankyou-texts__paragraph{
+    color: var(--light-grey);
+    letter-spacing: -0.5px;
+}
+
+.card__rating-rate{
+    display: flex;
+    flex-direction: column;
+}
+
+.card__rating-rate__score__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card__rating-rate__score__container-rate__btn{
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    color: var(--light-grey);
+    cursor: pointer;
+    transition: 300ms background-color;
+    font-size: 1em;
+}
+
+.card__rating-rate__score__container-rate__btn:hover{
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+
+.card__rating-rate__score__container-rate__btn:focus{
+    background-color: orange;
+    color: var(--white);
+}
+
+.card__rating-rate__submit{
+    display: inline-block;
+    margin: 30px auto 0px auto;
+    padding: 13px 0px;
+    background-color: var(--orange);
+    width: 100%;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-size: 1em;
+    transition: 300ms background-color;
+}
+
+.card__rating-rate__submit:hover{
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+/* ------------- Card Thank You ------------- */
+
+.card__thankyou{
+    display: none;
+    align-items: center;
+}
+
+.card__thankyou-score{
+    margin: 5px 0px;
+}
+
+.card__thankyou-score__paragraph{
+    color: var(--orange);
+    padding: 5px 10px;
+    background-color: #343e47;
+    border-radius: 15px;
+    vertical-align:middle;
+}
+
+.card__thankyou-texts{
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* ------------- Desktop Design ------------- */
+
+@media (min-width: 600px){
+    .card{
+        width: 400px;
+        height: 400px;
+    }
+    .card__rating-main__title, .card__thankyou-texts__title{
+        font-size: 1.75em;
+    }
+    
+    .card__rating-main__paragraph, .card__thankyou-texts__paragraph{
+        font-size: 1.05em;
+        letter-spacing: -0.1px;
+    }
+    .card__rating-rate__score__container-rate__btn{
+        width: 50px;
+        height: 50px;
+    }
+}
